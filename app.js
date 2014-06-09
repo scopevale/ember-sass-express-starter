@@ -2,6 +2,7 @@
  * Module dependencies.
  */
 
+var config = require('config');
 var express = require('express');
 var mongoose = require('mongoose');
 var path = require('path');
@@ -15,7 +16,7 @@ var bcrypt = require('bcrypt');
  * Mongoose configuration
  */
 
-mongoose.connect('localhost');
+mongoose.connect(config.mongodb.uri);
 mongoose.connection.on('error', function() {
   console.log('← MongoDB Connection Error →');
 });

@@ -7,6 +7,11 @@ lib-cov
 *.pid
 *.gz
 
+# Config stuff
+.bashrc
+.bash_aliases
+dot.gitignore
+
 pids
 logs
 results
